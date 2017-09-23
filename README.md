@@ -18,7 +18,7 @@ Install using npm
 npm i -g electron
 ```
 
-[![asciicast](https://asciinema.org/a/VwP7z17M5iwZinoDe0T0X96d7)](https://asciinema.org/a/VwP7z17M5iwZinoDe0T0X96d7)
+[![asciicast](https://asciinema.org/a/VwP7z17M5iwZinoDe0T0X96d7.png)](https://asciinema.org/a/VwP7z17M5iwZinoDe0T0X96d7)
 
 Then run from the command line
 ```
