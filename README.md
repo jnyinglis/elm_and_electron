@@ -28,3 +28,13 @@ electron main.js
 ## Hello, World!
 The first step here is to create a simple 'Hello, World!' program in Elm and have it run within Electron.
 
+Here are the basics of what's required.
+
+- main.js - This is the Electron bootstap code. This is where we tell Electron to use our index.html file.
+
+- index.html - This is the page we want to display in Electron and is the bootstrap for Elm. This will reference our compiled Elm code, which we will name elm.js
+
+- Main.elm - This is our Elm code. Below is how will compile this to elm.js
+```
+elm-make Main.elm --output elm.js
+```
