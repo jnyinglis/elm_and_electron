@@ -9,10 +9,6 @@ What's the plan?...well it's quite simple...start of with the most basic Elm pro
 
 When it starts to get too painful, then I'll stop...or maybe I'll get bored before then, or more likely I'll hit my intellectual barrier!
 
-## Hello, World!
-The first step here is to create a simple 'Hello, World!' program in Elm and have it run within Electron.
-
-
 ## Running Electron
 Running Electron is straightforward.
 
@@ -27,3 +23,8 @@ npm i -g electron
 Then run from the command line
 ```
 electron main.js
+```
+
+## Hello, World!
+The first step here is to create a simple 'Hello, World!' program in Elm and have it run within Electron.
+
