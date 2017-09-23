@@ -1,18 +1,24 @@
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <!-- This title will display at the top of your app window -->
-        <title>Feldspar</title>
-    </head>
 
-    <body>
-        <!-- This div is where we will insert out UI -->
-        <div id="container"></div>
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <!-- This title will display at the top of your app window -->
+    <title>Elm and Electron</title>
+    <!-- Below I am referecing elm.js, this is my 'compiled' Elm program -->
+    <script type="text/javascript" src="./elm.js"></script>
+    <script>window.Elm = require('./elm.js');</script>
+    <!-- To have this run in electron you need to run the following command -->
+    <!-- electron main.js -->
+    <!-- main.js is the bootstrapping for the electron. It sets up the app and references this html file -->
+    <!-- as the main window -->
+  </head>
 
-    <!-- finally we run ports.js to start the elm app. -->
-    <!-- There is nothing special about 'ports.js' and it doesn't need to be named this -->
-    <!-- although it does expect this HTML doc to have an element (a div is best) with an id equal to "container" -->
-    <!-- and it expects the Elm application to be named Main -->
-    <script type="text/javascript" src="ports.js"></script>
+  <body>
+  </body>
+
+  <script type="text/javascript">
+  var elmMain = Elm.Main.fullscreen();
+  </script>
 
 </html>
