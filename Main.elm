@@ -1,8 +1,15 @@
 module Main exposing (..)
 
-import Html
+import Html exposing (Html)
 
 
-main : Html.Html msg
+main : Html msg
 main =
-    Html.text "hello, world!"
+    Html.div []
+        [ Html.div []
+            [ Html.text "Enter something here"
+            , Html.input [] []
+            ]
+        , Html.div []
+            [ Html.button [] [ Html.text "Press this to accept the input" ] ]
+        ]

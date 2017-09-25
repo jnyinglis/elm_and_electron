@@ -38,3 +38,11 @@ Here are the basics of what's required.
 ```
 elm-make Main.elm --output elm.js
 ```
+## Input and Buttons
+Hello, World! is a fine greeting, but what we need is some interaction.
+
+Now we want give our user the ability to interact with our app. To do this we will add a text input field and a button. When the button is pressed we will do something with the text.
+
+Do you know HTML well? If you do then this will be easy, but if you’re like me and don’t know HTML, then you’ll be learning both Elm and HTML.
+
+To get a text input field and button in Elm we need to describe the HTML that does this. I had to google what these look like in HTML and then guess how they work in Elm, it's pretty
