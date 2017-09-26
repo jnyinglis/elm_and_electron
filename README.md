@@ -41,8 +41,28 @@ elm-make Main.elm --output elm.js
 ## Input and Buttons
 Hello, World! is a fine greeting, but what we need is some interaction.
 
-Now we want give our user the ability to interact with our app. To do this we will add a text input field and a button. When the button is pressed we will do something with the text.
+Now we want to give our user the ability to interact with our app. To do this we will add a text input field and a button. When the button is pressed we will do something with the text.
 
 Do you know HTML well? If you do then this will be easy, but if you’re like me and don’t know HTML, then you’ll be learning both Elm and HTML.
 
-To get a text input field and button in Elm we need to describe the HTML that does this. I had to google what these look like in HTML and then guess how they work in Elm, it's pretty
+To get a text input field and button in Elm we need to describe the HTML, using Elm, that does this. I had to google what these look like in HTML and then guess how they work in Elm, it's pretty straightforward, sort of.
+
+I then hit my first little snag, I want to capture the text that the user is typing, so how is this done. The help in Elm is great but it doesn't help you if you don't know HTML, so I'm backing to googling for help with Html.
+
+I'm now back from learning about Events in Html, ok this make sense. The events are categorized and looking at their names the two that seem promising are *Keyboard Events* and *Form Events*. *Form Events* is what I want and in particular it is the *oninput* event. The HTML help says the *oninput* is an Event Attribute and the Elm help for the *input* tag tells me where to define the attributes.
+
+
+Here is the basic pattern for an Elm application
+
+
+o Model - the state of your application
+o View - a way to view/render your as state as HTML.
+o Update - a way to update your state
+
+The flow of an Elm application
+
+To get things going you need to describe the initial starting state, the *Model*, of your application.
+
+1. Elm will then apply the *View* function that you have defined passing the current state of your application, you then provide back the HTML that Elm should render.
+1. Elm then takes care of applying your *Update* function whenever events occur (I'll call them messages from now on), passing it the current state and the message that needs to be handled. Your *Update* function can now evaluate its current state and the message that has been passed, to determine what the new state should be and then providing this back to Elm.
+1. Elm will then go back to step #1.
