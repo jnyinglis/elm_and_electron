@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+     "id": 1,
+     "username": "john i",
+     "firstname": "john",
+     "lastname": "inglis"
+    },
+    {
+     "id": 2,
+     "username": "user 2",
+     "firstname": "user",
+     "lastname": "2"
+    },
+    {
+     "id": 3,
+     "username": "user 3",
+     "firstname": "user",
+     "lastname": "3"
+    },
+    {
+     "id": 4,
+     "username": "user 4",
+     "firstname": "user",
+     "lastname": "4"
+    },
+    {
+     "id": 5,
+     "username": "user 5",
+     "firstname": "user",
+     "lastname": "5"
+    },
+    {
+     "id": 6,
+     "username": "user 6",
+     "firstname": "user",
+     "lastname": "6"
+    },
+    {
+     "id": 7,
+     "username": "user 7",
+     "firstname": "user",
+     "lastname": "7"
+    }
+  ]
+}

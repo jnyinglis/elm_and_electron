@@ -18,7 +18,31 @@
   </body>
 
   <script type="text/javascript">
-  var elmMain = Elm.Main.fullscreen();
+  // 
+  var usersElmTypeListUser = "\
+  [\
+     {\
+      \"id\": 1,\
+      \"userName\": \"john i\",\
+      \"firstName\": \"john\",\
+      \"lastName\": \"inglis\",\
+      \"origin\": \"usersElmTypeListUser from index.html\"\
+     },\
+     {\
+      \"id\": 2,\
+      \"userName\": \"user 2\",\
+      \"firstName\": \"user\",\
+      \"lastName\": \"2\",\
+      \"origin\": \"usersElmTypeListUser in index.html\"\
+     }\
+  ]\
+  ";
+  var maybeUserList = JSON.parse(usersElmTypeListUser);
+  //The value passed here, to the Main module, will be passed
+  //to the init function. It needs to be either null or a valid JSON
+  //structure.
+  //var elmMain = Elm.Main.fullscreen(null);
+  var elmMain = Elm.Main.fullscreen(maybeUserList);
   </script>
 
 </html>

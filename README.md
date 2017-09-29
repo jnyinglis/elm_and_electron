@@ -66,3 +66,51 @@ To get things going you need to describe the initial starting state, the *Model*
 1. Elm will then apply the *View* function that you have defined passing the current state of your application, you then provide back the HTML that Elm should render.
 1. Elm then takes care of applying your *Update* function whenever events occur (I'll call them messages from now on), passing it the current state and the message that needs to be handled. Your *Update* function can now evaluate its current state and the message that has been passed, to determine what the new state should be and then providing this back to Elm.
 1. Elm will then go back to step #1.
+
+## JSON and HTTP
+I don't know about you, but not only do I like interacting with users, I also like interacting with other systems. This is where the JSON and HTML comes into it.
+
+To do this I think I need to use an HTTP GET request, within Elm, to communicate using JSON. But before I do that, I want to understand JSON decoding in Elm. So, what I will start with is decoding a string within Elm, then move onto HTTP.
+
+For my example I will use a list of users, they will have the following attributes: a unique id, unique username, firstname and lastname.
+
+Below is a concrete example of the JSON.
+
+```
+[
+  {
+    "id": 1,
+    "username": "bobthebuilder",
+    "firstname": "Bob",
+    "lastname": "Builder"
+  }
+]
+```
+
+Here is the JSON schema
+
+```
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Users",
+  "description": "Schema for a list of users",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "number", "multipleOf": 1, "minimum": 1 },
+      "username": { "type": "string"},
+      "firstname": { "type": "string"},
+      "lastname": { "type": "string"}
+    }
+  }
+}
+```
+
+
+- Initialize the Elm program by passing in a JSON structure containing a list of users.
+- Decode a JSON structure using a string defined in the Elm program.
+- Decode a JSON structure return from an HTTP request.
+
+
+
