@@ -113,4 +113,22 @@ Here is the JSON schema
 - Decode a JSON structure return from an HTTP request.
 
 
+## Structure of the Elm App
+
+This app isn't very big and already I feel like it's getting messy. There is probably a way to re-structure the single file to make
+it more understandable, but I am going to break this apart now.
+
+First step is the directory structure. I am going to move the ELm source code into it's own directory.
+Here I change the elm-package.json file and change the source-directories as follows.
+```
+"source-directories": [
+  "src",
+  "test"
+]
+```
+
+Next I'm going to break the Main.elm file into a main controlling app file and four additional types, see Kris Jenkins.
+Main.elm becomes App.elm, the additional files are named Types, State, View, Rest
+
+I'm start by renaming Main.elm to App.elm and then copy App.elm to Types.elm, State.elm, View.elm, and Rest.elm. I'm then going to hack away at the files until the compiler tells me I'm done.
 
